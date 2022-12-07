@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let data = fs::read_to_string("./data.txt").unwrap();
+    let data = fs::read_to_string("./src/data.txt").unwrap();
 
     let data: Vec<&str> = data.split_terminator("\n\n").collect();
     let data: Vec<Vec<i32>> = data
