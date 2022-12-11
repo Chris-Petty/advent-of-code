@@ -6,10 +6,7 @@ fn thicc_elf_ometer(input: &str) -> Vec<i32> {
         .iter()
         .map(|f| f.split_whitespace().map(|s| s.parse().unwrap()).collect())
         .collect();
-    return data
-        .into_iter()
-        .map(|x| x.into_iter().reduce(|accum, value| accum + value).unwrap())
-        .collect();
+    return data.iter().map(|x| x.iter().sum()).collect();
 }
 
 fn part1(data: &Vec<i32>) -> String {
